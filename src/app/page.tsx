@@ -19,7 +19,7 @@ export default function HomePage() {
       {/* Categories ribbon */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 py-14">
         <SectionHeading eyebrow="The House of Awadh" title="Explore Our Collections" urdu="ہمارے مجموعے" />
-        <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-5">
+        <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-6">
           {CATEGORIES.map((c) => (
             <Link
               key={c.name}
