@@ -10,16 +10,24 @@ import { useStore } from "@/store/useStore";
 import { CATEGORIES } from "@/data/types";
 import { cn } from "@/lib/utils";
 
-const NAV = [
+// Primary links shown inline on desktop
+const NAV_PRIMARY = [
   { label: "Collections", href: "/collections" },
   { label: "The Heritage", href: "/heritage" },
   { label: "Artisans", href: "/artisans" },
   { label: "Nawabi Edit", href: "/collections?edit=nawabi" },
   { label: "Craftsmanship", href: "/craftsmanship" },
-  { label: "Partnerships", href: "/business" },
-  { label: "Boutiques", href: "/boutiques" },
-  { label: "Journal", href: "/journal" },
 ];
+
+// Secondary links — reachable via the hamburger drawer
+const NAV_SECONDARY = [
+  { label: "Business Partnerships", href: "/business" },
+  { label: "Our Boutiques", href: "/boutiques" },
+  { label: "Journal of Awadh", href: "/journal" },
+];
+
+// Full list for the drawer menu
+const NAV = [...NAV_PRIMARY, ...NAV_SECONDARY];
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -64,15 +72,15 @@ export function Header() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="flex h-16 items-center gap-4">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 shrink-0 mr-auto">
+            <Link href="/" className="flex items-center gap-2 shrink-0">
               <RumiDarwaza className="h-8 text-gold-light" />
               <span className="font-royal text-lg sm:text-xl tracking-[0.18em] text-ivory whitespace-nowrap">
                 NOOR-E-AWADH
               </span>
             </Link>
 
-            {/* Desktop nav — only on very wide screens, else hamburger */}
-            <nav className="hidden 2xl:flex items-center gap-5 shrink min-w-0">
+            {/* Desktop nav — primary links only */}
+            <nav className="hidden lg:flex flex-1 items-center justify-center gap-5 xl:gap-7 shrink min-w-0">
               <div
                 onMouseEnter={() => setMegaOpen(true)}
                 onMouseLeave={() => setMegaOpen(false)}
@@ -114,7 +122,7 @@ export function Header() {
                 </AnimatePresence>
               </div>
 
-              {NAV.slice(1).map((n) => (
+              {NAV_PRIMARY.slice(1).map((n) => (
                 <Link
                   key={n.href}
                   href={n.href}
@@ -126,7 +134,7 @@ export function Header() {
             </nav>
 
             {/* Actions */}
-            <div className="flex items-center gap-1 sm:gap-2 shrink-0 ml-auto 2xl:ml-4">
+            <div className="flex items-center gap-1 sm:gap-2 shrink-0">
               <button onClick={() => setSearchOpen((v) => !v)} aria-label="Search" className="p-2 text-ivory hover:text-gold-light transition focus-ring rounded">
                 <Search className="h-5 w-5" />
               </button>
@@ -141,7 +149,7 @@ export function Header() {
               <Link href="/account" aria-label="Account" className="relative p-2 text-ivory hover:text-gold-light transition focus-ring rounded">
                 <User className="h-5 w-5" />
               </Link>
-              <button onClick={() => setDrawer(true)} aria-label="Menu" className="2xl:hidden p-2 text-ivory focus-ring rounded">
+              <button onClick={() => setDrawer(true)} aria-label="Menu" className="p-2 text-ivory focus-ring rounded">
                 <Menu className="h-6 w-6" />
               </button>
             </div>
@@ -177,19 +185,19 @@ export function Header() {
         </AnimatePresence>
       </header>
 
-      {/* Mobile / tablet / laptop drawer */}
+      {/* Drawer menu — works at all screen sizes */}
       <AnimatePresence>
         {drawer && (
           <>
             <motion.div
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
               onClick={() => setDrawer(false)}
-              className="fixed inset-0 z-[60] bg-black/50 2xl:hidden"
+              className="fixed inset-0 z-[60] bg-black/50"
             />
             <motion.aside
               initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }}
               transition={{ type: "tween", duration: 0.3 }}
-              className="fixed right-0 top-0 z-[70] h-full w-[80%] max-w-sm bg-maroon text-ivory 2xl:hidden overflow-y-auto"
+              className="fixed right-0 top-0 z-[70] h-full w-[80%] max-w-sm bg-maroon text-ivory overflow-y-auto"
             >
               <div className="flex items-center justify-between p-4 border-b border-gold/30">
                 <div className="flex items-center gap-2">
