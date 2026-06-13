@@ -134,19 +134,19 @@ export function Header() {
             </nav>
 
             {/* Actions */}
-            <div className="flex items-center gap-1 sm:gap-2 shrink-0">
+            <div className="flex items-center gap-1 sm:gap-2 shrink-0 ml-auto">
               <button onClick={() => setSearchOpen((v) => !v)} aria-label="Search" className="p-2 text-ivory hover:text-gold-light transition focus-ring rounded">
                 <Search className="h-5 w-5" />
               </button>
-              <Link href="/wishlist" aria-label="Wishlist" className="relative p-2 text-ivory hover:text-gold-light transition focus-ring rounded">
+              <Link href="/wishlist" aria-label="Wishlist" className="relative hidden lg:flex p-2 text-ivory hover:text-gold-light transition focus-ring rounded">
                 <Heart className="h-5 w-5" />
                 {wishCount > 0 && <Badge n={wishCount} />}
               </Link>
-              <Link href="/cart" aria-label="Cart" className="relative p-2 text-ivory hover:text-gold-light transition focus-ring rounded">
+              <Link href="/cart" aria-label="Cart" className="relative hidden lg:flex p-2 text-ivory hover:text-gold-light transition focus-ring rounded">
                 <ShoppingBag className="h-5 w-5" />
                 {cartCount > 0 && <Badge n={cartCount} />}
               </Link>
-              <Link href="/account" aria-label="Account" className="relative p-2 text-ivory hover:text-gold-light transition focus-ring rounded">
+              <Link href="/account" aria-label="Account" className="relative hidden lg:flex p-2 text-ivory hover:text-gold-light transition focus-ring rounded">
                 <User className="h-5 w-5" />
               </Link>
               <button onClick={() => setDrawer(true)} aria-label="Menu" className="p-2 text-ivory focus-ring rounded">
@@ -212,6 +212,8 @@ export function Header() {
                     {n.label}
                   </Link>
                 ))}
+                <Link href="/wishlist" className="px-4 py-3 font-deco text-lg border-b border-white/5 hover:text-gold-light">Wishlist</Link>
+                <Link href="/cart" className="px-4 py-3 font-deco text-lg border-b border-white/5 hover:text-gold-light">Cart</Link>
                 <Link href="/account" className="px-4 py-3 font-deco text-lg hover:text-gold-light">My Account</Link>
               </nav>
               <p className="px-4 py-6 font-royal text-gold-light text-center tracking-[0.3em]" dir="rtl">نورِ اودھ</p>

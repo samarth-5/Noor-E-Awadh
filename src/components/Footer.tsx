@@ -123,8 +123,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 border-t border-gold/20 py-6 text-center text-xs text-ivory/50">
-          © {new Date().getFullYear()} Noor-e-Awadh · Crafted in Lucknow, woven with heritage ·
-          Har Dhaage Mein Awadh Ki Rooh
+          © {new Date().getFullYear()} Noor-e-Awadh · Developed by Samarth
         </div>
       </div>
     </footer>
