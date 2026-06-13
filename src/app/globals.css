@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --maroon: #4a0f1a;
+  --maroon-dark: #300a12;
+  --royal: #153e75;
+  --emerald: #0b3d2e;
+  --ivory: #f8f4ee;
+  --gold: #b8860b;
+  --gold-light: #d4af37;
+  --font-playfair: "Playfair Display", Georgia, serif;
+  --font-cinzel: "Cinzel", "Playfair Display", serif;
+  --font-inter: "Inter", system-ui, sans-serif;
+  --font-cormorant: "Cormorant Garamond", Georgia, serif;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ivory);
+  color: var(--maroon);
+  font-feature-settings: "liga" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--ivory);
+}
+
+/* Heritage scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--ivory); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--maroon), var(--maroon-dark));
+  border-radius: 8px;
+}
+
+/* Gold embroidery underline that traces on hover */
+.thread-link {
+  position: relative;
+}
+.thread-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.thread-link:hover::after { transform: scaleX(1); }
+
+/* Shimmering gold text for accents */
+.gold-shimmer {
+  background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 25%, #fff6da 50%, var(--gold-light) 75%, var(--gold) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3.5s linear infinite;
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Skeleton shimmer for loading product cards */
+.skeleton {
+  background: linear-gradient(90deg, #ece5da 25%, #f5efe6 37%, #ece5da 63%);
+  background-size: 400% 100%;
+  animation: skeleton 1.4s ease infinite;
+}
+@keyframes skeleton {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+/* Embroidery thread dash for the loading screen tracing */
+.trace {
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: trace 2.4s ease forwards;
+}
+@keyframes trace {
+  to { stroke-dashoffset: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 2px;
+}
