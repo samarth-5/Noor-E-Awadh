@@ -31,9 +31,9 @@ export const PRODUCTS: Product[] = [
     "rating": 4.6,
     "reviewCount": 12,
     "images": [
-      "https://images.unsplash.com/photo-1610189000000-0?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80"
+      "https://manyavar.scene7.com/is/image/manyavar/SDES651_310-Black.35575_16-11-2023-16-41:650x900?dpr=on,2",
+      "https://manyavar.scene7.com/is/image/manyavar/SDES651_310-Black.35580_16-11-2023-16-41:650x900?dpr=on,2",
+      "https://manyavar.scene7.com/is/image/manyavar/SDES651_310-Black.35586_16-11-2023-16-41:650x900?dpr=on,2"
     ],
     "sku": "NEA-KUR-001",
     "bestseller": true,
@@ -66,9 +66,9 @@ export const PRODUCTS: Product[] = [
     "rating": 4.8,
     "reviewCount": 34,
     "images": [
-      "https://images.unsplash.com/photo-1622470953794-aa9c70b0fb9d?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1602810319428-019690571b5b?auto=format&fit=crop&w=900&q=80"
+      "https://manyavar.scene7.com/is/image/manyavar/KFN056_306-Dark+Blue.8189_28-08-2024-15-16:417-520?dpr=on,2",
+      "https://manyavar.scene7.com/is/image/manyavar/KFN056_306-Dark+Blue.8193_28-08-2024-15-17:417-520?dpr=on,2",
+      "https://manyavar.scene7.com/is/image/manyavar/KFN056_306-Dark+Blue.8169_28-08-2024-15-14:297-368?dpr=on,2"
     ],
     "sku": "NEA-KUR-002",
     "bestseller": false,
@@ -101,9 +101,9 @@ export const PRODUCTS: Product[] = [
     "rating": 4.9,
     "reviewCount": 56,
     "images": [
-      "https://images.unsplash.com/photo-1610189000000-0?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80"
+      "https://theblockprintco.com/cdn/shop/files/2_20d82bf2-3a8d-43a6-bcb8-b9d866ee570f.png?v=1779011903&width=1800",
+      "https://theblockprintco.com/cdn/shop/files/2_95a43ec0-a72c-4d06-ac3d-bd620fe82cb6.png?v=1776171168&width=1800",
+      "https://theblockprintco.com/cdn/shop/files/1_eaaba233-f21c-4a5b-b82b-c4de93aa7f5a.png?v=1776171168&width=1800"
     ],
     "sku": "NEA-KUR-003",
     "bestseller": false,
@@ -136,9 +136,9 @@ export const PRODUCTS: Product[] = [
     "rating": 4.7,
     "reviewCount": 21,
     "images": [
-      "https://images.unsplash.com/photo-1622470953794-aa9c70b0fb9d?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1602810319428-019690571b5b?auto=format&fit=crop&w=900&q=80"
+      "https://www.yourlibaas.com/cdn/shop/products/S.L45Karima_1_compact.jpg?v=1744114319",
+      "https://www.yourlibaas.com/cdn/shop/products/S.L45Karima_4_compact.jpg?v=1744114320",
+      "https://www.yourlibaas.com/cdn/shop/products/S.L45Karima_4_compact.jpg?v=1744114320"
     ],
     "sku": "NEA-KUR-004",
     "bestseller": false,
